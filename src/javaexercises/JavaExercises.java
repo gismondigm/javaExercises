@@ -8,6 +8,7 @@ public class JavaExercises
         Exercise1.RunExerciseOne();
         Exercise2.RunExerciseTwo();
         Exercise3.RunExerciseThree();
+        Exercise4.RunExerciseFour();
         
     }    
 }
