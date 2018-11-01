@@ -3,7 +3,8 @@ package javaexercises.Exercises;
 public class Exercise1 
 {
     public static void RunExerciseOne()
-    {        
+    {  
+       System.out.println("Starting Exercise 1");  
        double circlePerimeter, circleArea, circleRadius, rectangleArea, rectangleWidth, rectangleHeight, rectanglePerimeter;                   
        circleRadius = 5.5;
        rectangleWidth = 4.5;
@@ -37,6 +38,7 @@ public class Exercise1
        System.out.println("Rectangle Height = " + rectangleHeight);
        System.out.println("Rectangle Area = " + rectangleArea);
        System.out.println("Rectangle Perimeter = " + rectanglePerimeter);
+       System.out.println("Ending Exercise 1");
     }
     public static double CalculateCircleArea(double radius)
     {
