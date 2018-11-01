@@ -10,5 +10,6 @@ public class JavaExercises
         Exercise3.RunExerciseThree();
         Exercise4.RunExerciseFour();
         exercise5.RunExerciseFive();
+        Exercise6.RunExerciseSix();
     }    
 }
