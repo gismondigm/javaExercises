@@ -9,7 +9,7 @@ public class JavaExercises
         Exercise2.RunExerciseTwo();
         Exercise3.RunExerciseThree();
         Exercise4.RunExerciseFour();
-        exercise5.RunExerciseFive();
+        Exercise5.RunExerciseFive();
         Exercise6.RunExerciseSix();
     }    
 }
