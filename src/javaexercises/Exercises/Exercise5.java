@@ -13,9 +13,7 @@ public class Exercise5
         Exercise5_6();
         Exercise5_17();
         Exercise5_22();
-        Exercise5_45();
-        System.out.println("Ending Exercise 5");
-        Helper.PrintLineBreak();
+        
     }
     private static void Exercise5_1()
     {
@@ -147,6 +145,7 @@ public class Exercise5
         mean = statTotal/10;       
         System.out.println("The mean is: " + mean);
         System.out.println("The Standard Deviation is: " + standardDeviation);
+        System.out.println("Ending Exercise 5");
         Helper.PrintLineBreak();
     }
 }
