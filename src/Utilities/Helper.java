@@ -1,5 +1,11 @@
 package Utilities;
 
+import Models.Grade;
+import Models.Student;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Helper 
 {
     public static void PrintLineBreak()
@@ -103,5 +109,57 @@ public class Helper
     public static double CalculateNetPay(double grossPayCalculated, double totalDeduction)
     {
         return grossPayCalculated - totalDeduction;
+    }
+    public static int GetLargestNumberFromArray(int[] intArray)
+    {        
+        int largest = intArray[0];
+        for(int i = 0; i < intArray.length; i++)
+        {
+            if(largest < intArray[i])
+            {
+                largest = intArray[i];
+            }
+        }
+        return largest;
+    }
+    public static List<Grade> GetGradesFromLargestNumber(int[] intArray)
+    {        
+        int largestFromArray = GetLargestNumberFromArray(intArray);
+        List<Grade> GradeList = new ArrayList<>();
+        for(int i = 0; i < intArray.length; i++)
+        {
+            Student student = new Student("Student Identifier: " + i);
+            if(intArray[i] >= largestFromArray-10)
+            {
+                GradeList.add(new Grade(intArray[i], "A", student));
+            }
+            else if(intArray[i] >= largestFromArray-20)
+            {
+                GradeList.add(new Grade(intArray[i], "B", student));
+            }
+            else if(intArray[i] >= largestFromArray-30)
+            {
+                GradeList.add(new Grade(intArray[i], "C", student));
+            }
+            else if(intArray[i] >= largestFromArray-40)
+            {
+                GradeList.add(new Grade(intArray[i], "D", student));
+            }
+            else
+            {
+                GradeList.add(new Grade(intArray[i], "F", student));
+            }            
+        }
+        return GradeList;
+    }
+    public static int[] GetArrayFromInputByLength(int arrayLength)
+    {
+        Scanner intScanner = new Scanner(System.in);
+        int[]intArray = new int[arrayLength];
+        for (int i = 0; i < arrayLength; i++) 
+        {
+            intArray[i]=(intScanner.nextInt());
+        }
+        return intArray;
     }
 }
