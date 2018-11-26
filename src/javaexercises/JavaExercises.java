@@ -11,6 +11,7 @@ public class JavaExercises
 //        Exercise4.RunExerciseFour();
 //        Exercise5.RunExerciseFive();
 //        Exercise6.RunExerciseSix();
-          Exercise7.RunExerciseSeven();
+       // Exercise7.RunExerciseSeven();
+          Exercise8.RunExerciseEight();
     }    
 }
