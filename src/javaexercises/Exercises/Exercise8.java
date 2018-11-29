@@ -64,7 +64,7 @@ public class Exercise8
         double[][] addedMatrixOne = GetAddedMatrix(1);
         double[][] addedMatrixTwo = GetAddedMatrix(2);
         double[][] totalMatrixThree = AddMatrix(addedMatrixOne, addedMatrixTwo);
-        System.out.println("The matrices are added as follows: " + addedMatrixOne + " + " addedMatrixTwo + " = " + totalMatrixThree);              
+        //System.out.println("The matrices are added as follows: " + addedMatrixOne + " + " addedMatrixTwo + " = " + totalMatrixThree);              
     }
     public static double[][] GetAddedMatrix(int matrixNumber)
     {
@@ -98,7 +98,7 @@ public class Exercise8
         double[][] multipliedMatrixOne = GetMultipliedMatrix(1);
         double[][] multipliedMatrixTwo = GetMultipliedMatrix(2);
         double[][] totalMultipliedMatrixThree = MultiplyMatrix(multipliedMatrixOne, multipliedMatrixTwo);
-        System.out.println("The multiplication of matices is: " + multipliedMatrixOne + " * " multipliedMatrixTwo + " = " + totalMultipliedMatrixThree);
+        //System.out.println("The multiplication of matices is: " + multipliedMatrixOne + " * " multipliedMatrixTwo + " = " + totalMultipliedMatrixThree);
     }
     public static double[][] GetMultipliedMatrix(int matrixNumber)
     {
