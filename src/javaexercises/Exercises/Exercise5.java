@@ -3,7 +3,7 @@ package javaexercises.Exercises;
 import Utilities.Helper;
 import java.util.Scanner;  
 
-public class Exercise5TBD 
+public class Exercise5 
 {
     public static void RunExerciseFive()
     {
