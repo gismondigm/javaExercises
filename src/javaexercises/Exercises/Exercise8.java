@@ -17,8 +17,8 @@ public class Exercise8 {
     public static void RunExerciseEight() {
         Helper.PrintLineBreak();
         System.out.println("Starting Exercise 8");
-        //Exercise8_1();
-        //Exercise8_5();
+        Exercise8_1();
+        Exercise8_5();
         Exercise8_6();
         Exercise8_37();
         System.out.println("Ending Exercise 8");
@@ -150,17 +150,52 @@ public class Exercise8 {
         // 8.37 Guess the capitals
         Scanner guessCapitals = new Scanner(System.in);
         String[][] capitalsOfStates = DisplayCapitals();
+        int count = 0;
         for (int i = 0; i < capitalsOfStates.length; i++) {
-            System.out.println("What is the capital of " + capitalsOfStates + "?");
+            System.out.println("What is the capital of " + capitalsOfStates[i][0] + "?");
+            String s = guessCapitals.nextLine();
+            if (s.equalsIgnoreCase(capitalsOfStates[i][1]))
+            {
+                System.out.println("Your answer is correct");
+                count++;
+            }
+            else
+            {
+                System.out.println("The correct answer should be: " + capitalsOfStates[i][1]);
+            }
         }
+        System.out.println("\nThe correct count is " + count);
 
     }
-
     public static String[][] DisplayCapitals() {
-        String[][] matrixC = new String[3][3];
-        return matrixC;
-    }
-
+        String[][] capitals =
+        {
+            {"Alabama", "Montgomery"}, {"Alaska", "Juneau"}, {"Arizona", "Phoenix"},
+            {"Arkansas", "Little Rock"}, {"California", "Sacramento"},
+            {"Colorado", "Denver"}, {"Connecticut", "Hartford"}, 
+            {"Delaware", "Dover"}, {"Florida", "Tallahassee"}, 
+            {"Georgia", "Atlanta"},{"Hawaii", "Honolulu"}, {"Idaho", "Boise"},
+            {"Illinois", "Springfield"}, {"Indiana", "Indianapolis"},
+            {"Iowa Des", "Moines"}, {"Kansas", "Topeka"}, {"Kentucky","Frankfort"}, 
+            {"Louisiana", "Baton Rouge"}, {"Maine", "Augusta"}, 
+            {"Maryland", "Annapolis"}, {"Massachusetts", "Boston"}, 
+            {"Michigan", "Lansing"}, {"Minnesota", "Saint Paul"}, 
+            {"Mississippi", "Jackson"}, {"Missouri", "Jefferson City"}, 
+            {"Montana", "Helena"}, {"Nebraska", "Lincoln"}, 
+            {"Nevada", "Carson City"}, {"New Hampshire", "Concord"}, 
+            {"New Jersey", "Trenton"}, {"New Mexico", "Santa Fe"}, 
+            {"New York", "Albany"}, {"North Carolina", "Raleigh"}, 
+            {"North Dakota", "Bismarck"},{"Ohio", "Columbus"},
+            {"Oklahoma", "Oklahoma City"}, {"Oregon", "Salem"}, 
+            {"Pennsylvania", "Harrisburg"}, {"Rhode Island", "Providence"}, 
+            {"South Carolina", "Columbia"}, {"South Dakota", "Pierre"}, 
+            {"Tennessee", "Nashville"}, {"Texas", "Austin"}, 
+            {"Utah", "Salt Lake City"}, {"Vermont", "Montpelier"}, 
+            {"Virginia", "Richmond"}, {"Washington", "Olympia"}, 
+            {"West Virginia", "Charleston"}, {"Wisconsin", "Madison"}, 
+            {"Wyoming", "Cheyenne"}};
+        return capitals;
+        }
     public static double Round(double input) {
         return (Math.round(input * 100) / 100.0);
     }
