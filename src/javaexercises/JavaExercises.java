@@ -12,6 +12,7 @@ public class JavaExercises
 //        Exercise5.RunExerciseFive();
 //        Exercise6.RunExerciseSix();
        // Exercise7.RunExerciseSeven();
-          Exercise8.RunExerciseEight();
+       // Exercise8.RunExerciseEight();
+          Exercise9_1.RunExerciseNine_One();
     }    
 }
