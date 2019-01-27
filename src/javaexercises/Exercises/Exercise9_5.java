@@ -22,8 +22,10 @@ public class Exercise9_5
     public static void Exercise9_5() 
     {
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
-        System.out.println(new Date().toString());        
-        gregorianCalendar.setTimeInMillis(1234567898765L);
-        System.out.printf("Year: "+gregorianCalendar.get(Calendar.YEAR)+" Month: "+gregorianCalendar.get(Calendar.MONTH)+"Day: "+gregorianCalendar.get(Calendar.DATE));
+        String today = new Date().toString();
+        long timeMilliseconds = 1234567898765L;
+        System.out.println(today);        
+        gregorianCalendar.setTimeInMillis(timeMilliseconds);
+        System.out.printf("Milliseconds: "+timeMilliseconds+" Year: "+gregorianCalendar.get(Calendar.YEAR)+" Month: "+gregorianCalendar.get(Calendar.MONTH)+" Day: "+gregorianCalendar.get(Calendar.DAY_OF_MONTH));
     }    
 }
