@@ -5,6 +5,8 @@
  * 1/16/19
 */
 package javaexercises.Exercises;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 /**
  *
@@ -19,13 +21,9 @@ public class Exercise9_5
     }
     public static void Exercise9_5() 
     {
-       GregorianCalendar calender = new GregorianCalendar();
-       System.out.println("The current date: ");
-       System.out.println(calender.get(calender.month) + "/" + calender.get(calender.day) + "/" + calender.get(calender.year));
-       
-       calender.SetTimeInMillis(1234567898765L);
-       System.out.println("The elapsed time since January 1, 1970 is: " + calender.SetTimeInMillis(1234567898765L) + " milliseconds");
-       System.out.println(calender.get(calender.month) + "/" + calender.get(calender.day) + "/" + calender.get(calender.year));
-    }
-    
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        System.out.println(new Date().toString());        
+        gregorianCalendar.setTimeInMillis(1234567898765L);
+        System.out.printf("Year: "+gregorianCalendar.get(Calendar.YEAR)+" Month: "+gregorianCalendar.get(Calendar.MONTH)+"Day: "+gregorianCalendar.get(Calendar.DATE));
+    }    
 }
