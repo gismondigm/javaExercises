@@ -41,51 +41,15 @@ public static void RunExerciseNine_Ten()
         double a = input.nextDouble();
         double b = input.nextDouble();
         double c = input.nextDouble();
-        double discriminant = 0;
-        double rootOne = 0;
-        double rootTwo = 0;
-        
-        QuadraticEquation.DetermineDiscriminant(discriminant, rootOne, rootTwo);
-    }
-     
-}
-    class QuadraticEquation
-    {
-        private double a;
-        private double b;
-        private double c;   
-    
-    QuadraticEquation(double a, double b, double c)
-    {
-        
-    }
-        
-    public double GetA()
-    {
-        return a;
-    }
-    public double GetB()
-    {
-        return b;
-    }
-    public double GetC()
-    {
-        return c;
-    }
-    public double GetDiscriminant()
-    {
-        double discriminant = Math.pow(b,2) - 4*a*c;
-        return discriminant;
-    }
-    public double GetRoot1()
-    {
-        double rootOne = (-b + Math.pow(b*b -4*a*c, 0.5))/2*a;
-        return rootOne;
-    }
-    public double GetRoot2()
-    {
-        double rootTwo = (-b - Math.pow(b*b -4*a*c, 0.5))/2*a;
-        return rootTwo;
+        QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
+        System.out.println("Discriminant: " + quadraticEquation.discriminant);
+        System.out.println("GetDiscriminant: " + quadraticEquation.getDiscriminant());
+        System.out.println("Root1: " + quadraticEquation.root1);
+        System.out.println("GetRoot1: " + quadraticEquation.getRoot1());
+        System.out.println("Root2: " + quadraticEquation.root2);
+        System.out.println("GetRoot2: " + quadraticEquation.getRoot2());
+        DetermineDiscriminant(quadraticEquation.getDiscriminant(), quadraticEquation.getRoot1(), quadraticEquation.getRoot2());
+        DetermineDiscriminant(quadraticEquation.discriminant, quadraticEquation.root1, quadraticEquation.root2);
     }
     public static void DetermineDiscriminant(double discriminant, double rootOne, double rootTwo)
     {
@@ -100,4 +64,50 @@ public static void RunExerciseNine_Ten()
         else
             System.out.println("The equation has no roots");
     }
+     
+}
+    class QuadraticEquation
+    {
+        private double a;
+        private double b;
+        private double c;   
+        public double discriminant;
+        public double root1;
+        public double root2;
+    QuadraticEquation(double a, double b, double c)
+    {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.discriminant = getDiscriminant();
+        this.root1 = getRoot1();
+        this.root2 = getRoot2();
     }
+        
+    public double getA()
+    {
+        return a;
+    }
+    public double getB()
+    {
+        return b;
+    }
+    public double getC()
+    {
+        return c;
+    }
+    public double getDiscriminant()
+    {
+        return Math.pow(b,2) - 4*a*c;
+    }
+    public double getRoot1()
+    {
+        double rootOne = (-b + Math.pow(b*b -4*a*c, 0.5))/2*a;
+        return rootOne;
+    }
+    public double getRoot2()
+    {
+        double rootTwo = (-b - Math.pow(b*b -4*a*c, 0.5))/2*a;
+        return rootTwo;
+    }    
+ }
